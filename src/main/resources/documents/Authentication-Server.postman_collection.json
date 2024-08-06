@@ -1,0 +1,744 @@
+{
+	"info": {
+		"_postman_id": "4cb7e510-960b-4231-842e-2831eb4a3bc5",
+		"name": "Auth-Server-Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29823983",
+		"_collection_link": "https://sadhan-vai-er-team.postman.co/workspace/Mehedi's-Workspace~e9ca061c-8589-4f8e-af8b-1ca87418910c/collection/29823983-4cb7e510-960b-4231-842e-2831eb4a3bc5?action=share&source=collection_link&creator=29823983"
+	},
+	"item": [
+		{
+			"name": "menu",
+			"item": [
+				{
+					"name": "Menu Permission",
+					"item": [
+						{
+							"name": "Add Menu Permission",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": 2,\r\n    \"menuId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseAPI}}/menu-permission/add",
+									"host": [
+										"{{baseAPI}}"
+									],
+									"path": [
+										"menu-permission",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Menu Permissions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseAPI}}/menu-permission/all",
+									"host": [
+										"{{baseAPI}}"
+									],
+									"path": [
+										"menu-permission",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Menu Permission By Role",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseAPI}}/menu-permission/role/2",
+									"host": [
+										"{{baseAPI}}"
+									],
+									"path": [
+										"menu-permission",
+										"role",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Menu Permission",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"roleId\": 2,\r\n    \"menuIdList\": [\r\n        1,\r\n        4,\r\n        5,\r\n        6\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseAPI}}/menu-permission/update",
+									"host": [
+										"{{baseAPI}}"
+									],
+									"path": [
+										"menu-permission",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parentMenuId\":8,\r\n    \"menuNameEng\":\"Delete Menu Permission\",\r\n    \"menuNameBng\":\"ডিলিট মেনু পারমিশন\",\r\n    \"constantName\":\"DELETE_MENU_PERMISSION\",\r\n    \"hyperLink\":\"/menu-permission/delete/id\",\r\n    \"orderIndex\":5,\r\n    \"icon\":\"fa-fa-icon\",\r\n    \"requestMethod\":\"DELETE\",\r\n    \"isVisible\":true,\r\n    \"isAPI\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/menu/add",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Menu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parentMenuId\":0,\r\n    \"menuNameEng\":\"ABC UPDATED\",\r\n    \"menuNameBng\":\"মেনু এবিসি\",\r\n    \"constantName\":\"ABC_MENU_UPDATED\",\r\n    \"hyperLink\":\"www.abc.com\",\r\n    \"orderIndex\":2,\r\n    \"icon\":\"fa-fa-icon\",\r\n    \"requestMethod\":\"GET\",\r\n    \"isVisible\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/menu/update/1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Menu By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/menu/1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Menus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/menu/all",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Menu By Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/menu/role/2",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"role",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Menu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/menu/delete/1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"menu",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "CREATE USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcwNDg1NjA4OSwiZXhwIjoxNzA0ODU5Njg5fQ.mISpXscCCTd70Q6VTBqdTHDEZipYow-XiaGh5QY2rLc",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"User A\",\r\n    \"username\": \"user_a\",\r\n    \"email\": \"user_a@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": [\"ROLE_USER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/user/register",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/user/1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/user/all",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user By username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/user?username=super_admin",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "super_admin"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"User A\",\r\n    \"username\": \"user_a\",\r\n    \"email\": \"user_a@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"role\": [\"ROLE_USER\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/user/update/1",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "role",
+			"item": [
+				{
+					"name": "Add Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ROLE_USER\",\r\n    \"roleNameEng\":\"User\",\r\n    \"roleNameBng\":\"ইউজার\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/role/add",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"role",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role BY Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/role/2",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"role",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/role/all",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"role",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Roles",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ROLE_MODERATOR\",\r\n    \"roleNameEng\":\"Moderator\",\r\n    \"roleNameBng\":\"মডারেটর\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseAPI}}/role/update/3",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"role",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseAPI}}/role/delete/3",
+							"host": [
+								"{{baseAPI}}"
+							],
+							"path": [
+								"role",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"super_admin\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseAPI}}/auth/signin",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestUserAccess",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzA0ODY3NTY4LCJleHAiOjE3MDQ4NzExNjgsInJvbGVzIjpbIlJPTEVfVVNFUiJdfQ.8fDvJz6q3uZLKKNgEsqPGfoZLpk6owUoK-NBc0mCAgQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseAPI}}/test/admin",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"test",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNzA0ODY3NTY4LCJleHAiOjE3MDQ4NzExNjgsInJvbGVzIjpbIlJPTEVfVVNFUiJdfQ.8fDvJz6q3uZLKKNgEsqPGfoZLpk6owUoK-NBc0mCAgQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{baseAPI}}/auth/refresh-token",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignOut",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/user/sign-out",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"user",
+						"sign-out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignOutFromAllDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/user/sign-out-from-all-device",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"user",
+						"sign-out-from-all-device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ipinfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "ipinfo.io/127.0.0.1?token=443295bde2a758",
+					"host": [
+						"ipinfo",
+						"io"
+					],
+					"path": [
+						"127.0.0.1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "443295bde2a758"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLoggedInDevices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/user/get-logged-in-devices",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"user",
+						"get-logged-in-devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"currentPassword\":\"123456\",\r\n    \"newPassword\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseAPI}}/user/change-password",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"user",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RevokeAccessOfAUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/admin/revoke-access?username=user",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"admin",
+						"revoke-access"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HOME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcyMDIwMzY5MSwiZXhwIjoxNzIwMjA0NTkxLCJyb2xlcyI6WyJST0xFX0FETUlOIl19.nxX87Lr6MXRlNF9sme1U4eR12R5gpc067lynfOyHvLtqNPlnWhLZvQ7do7OHSmmY",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseAPI",
+			"value": "http://localhost:9095/authentication-server",
+			"type": "string"
+		}
+	]
+}
