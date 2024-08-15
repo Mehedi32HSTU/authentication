@@ -140,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"parentMenuId\":0,\r\n    \"menuNameEng\":\"ABC UPDATED\",\r\n    \"menuNameBng\":\"মেনু এবিসি\",\r\n    \"constantName\":\"ABC_MENU_UPDATED\",\r\n    \"hyperLink\":\"www.abc.com\",\r\n    \"orderIndex\":2,\r\n    \"icon\":\"fa-fa-icon\",\r\n    \"requestMethod\":\"GET\",\r\n    \"isVisible\":true\r\n}",
+							"raw": "{\r\n    \"parentMenuId\":2,\r\n    \"menuNameEng\":\"Role Wise Menu\",\r\n    \"menuNameBng\":\"রোল অনুযায়ী মেনু দেখুন\",\r\n    \"constantName\":\"ROLE_WISE_MENU\",\r\n    \"hyperLink\":\"/menu/role/id\",\r\n    \"orderIndex\":3,\r\n    \"icon\":\"fa-fa-icon\",\r\n    \"requestMethod\":\"GET\",\r\n    \"isVisible\":true,\r\n    \"isAPI\":true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -148,14 +148,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseAPI}}/menu/update/1",
+							"raw": "{{baseAPI}}/menu/update/5",
 							"host": [
 								"{{baseAPI}}"
 							],
 							"path": [
 								"menu",
 								"update",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -698,6 +698,14 @@
 						""
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
